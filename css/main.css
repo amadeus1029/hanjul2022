@@ -1,0 +1,280 @@
+@charset "UTF-8";
+/* import/variable { */
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.hide-text {
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+/* EliceDigitalBaeum */
+@font-face {
+  font-family: 'EliceDigitalBaeum';
+  src: url('../fonts/elicedigitalbaeumTTF/EliceDigitalBaeum_Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'EliceDigitalBaeum';
+  src: url('../fonts/elicedigitalbaeumTTF/EliceDigitalBaeum_Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+/* GMarketSans */
+@font-face {
+  font-family: 'GMarketSans';
+  src: url('../fonts/gmarketsansTTF/GmarketSansTTFLight.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'GMarketSans';
+  src: url('../fonts/gmarketsansTTF/GmarketSansTTFMedium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'GMarketSans';
+  src: url('../fonts/gmarketsansTTF/GmarketSansTTFBold.ttf') format('truetype');
+  font-weight: 700;
+}
+/* KoPubBatang */
+@font-face {
+  font-family: 'KoPubBatang';
+  src: url('../fonts/kopubdotumTTF/KoPubWorld Batang Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'KoPubBatang';
+  src: url('../fonts/kopubdotumTTF/KoPubWorld Batang Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'KoPubBatang';
+  src: url('../fonts/kopubdotumTTF/KoPubWorld Batang Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+/* KoPubDotum */
+@font-face {
+  font-family: 'KoPubDotum';
+  src: url('../fonts/kopubdotumTTF/KoPubWorld Dotum Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'KoPubDotum';
+  src: url('../fonts/kopubdotumTTF/KoPubWorld Dotum Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'KoPubDotum';
+  src: url('../fonts/kopubdotumTTF/KoPubWorld Dotum Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+/* SCDream */
+@font-face {
+  font-family: 'SCDream';
+  src: url('../fonts/scoredreamOTF/SCDream4.otf') format('opentype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'SCDream';
+  src: url('../fonts/scoredreamOTF/SCDream7.otf') format('opentype');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'SCDream';
+  src: url('../fonts/scoredreamOTF/SCDream9.otf') format('opentype');
+  font-weight: 900;
+}
+/* Nixgon */
+@font-face {
+  font-family: 'Nixgon';
+  src: url('../fonts/nixgonTTF/NIXGONFONTS L 2.0.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Nixgon';
+  src: url('../fonts/nixgonTTF/NIXGONFONTS M 2.0.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Nixgon';
+  src: url('../fonts/nixgonTTF/NIXGONFONTS B 2.0.ttf') format('truetype');
+  font-weight: 700;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  position: relative;
+  background-color: #000;
+}
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+#header {
+  z-index: 9999;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000;
+}
+#header .wrapper {
+  height: 80px;
+}
+#header .wrapper h1.logo {
+  float: left;
+  margin-top: 15px;
+}
+#header .wrapper h1.logo a {
+  display: block;
+}
+#header .wrapper h1.logo a img {
+  width: 76px;
+  height: 49px;
+}
+#header .wrapper #nav {
+  float: left;
+  margin: 30px 0 0 228px;
+}
+#header .wrapper #nav ul.nav-list li {
+  float: left;
+}
+#header .wrapper #nav ul.nav-list li:nth-child(1) {
+  margin-right: 99px;
+}
+#header .wrapper #nav ul.nav-list li:nth-child(2) {
+  margin-right: 96px;
+}
+#header .wrapper #nav ul.nav-list li:nth-child(3) {
+  margin-right: 82px;
+}
+#header .wrapper #nav ul.nav-list li:nth-child(4) {
+  margin-right: 74px;
+}
+#header .wrapper #nav ul.nav-list li a {
+  display: block;
+  height: 20px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: Nixgon;
+  line-height: 20px;
+  letter-spacing: -1px;
+}
+#header .wrapper #nav ul.nav-list li a.checked {
+  color: #ffbb00;
+  font-weight: 700;
+}
+#header .wrapper a.kakao-friend {
+  display: block;
+  float: right;
+  margin-top: 24px;
+}
+#header .wrapper a.kakao-friend img {
+  width: 32px;
+  height: 32px;
+}
+#container #home {
+  position: relative;
+}
+#container #home .video-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+#container #home .video-bg .background-cover {
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  background-color: #000;
+  opacity: 0.85;
+}
+#container #home .wrapper {
+  z-index: 2;
+  height: 1140px;
+}
+#container #home .wrapper a.about-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 50px;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 18px;
+  font-family: "KoPubDotum";
+  font-weight: 500;
+  line-height: 50px;
+  letter-spacing: -1px;
+  text-align: center;
+}
+#container #home .wrapper a.about-btn:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+#container #home .wrapper .title-box {
+  float: left;
+  margin-top: 680px;
+}
+#container #home .wrapper .title-box p {
+  color: #fff;
+  font-family: "KoPubDotum";
+  font-weight: 500;
+}
+#container #home .wrapper .title-box p.title {
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: -2px;
+}
+#container #home .wrapper .title-box p.tag-list {
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: -1px;
+  margin: 5px 0 25px 0;
+}
+#container #home .wrapper .title-box ul.link-list li {
+  float: left;
+  margin-right: 10px;
+}
+#container #home .wrapper .title-box ul.link-list li a {
+  display: block;
+  width: 38px;
+  height: 38px;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+#container #home .wrapper .title-box ul.link-list li a.facebook {
+  background-image: url("../img/facebook.png");
+}
+#container #home .wrapper .title-box ul.link-list li a.youtube {
+  background-image: url("../img/youtube.png");
+}
+#container #home .wrapper .title-box ul.link-list li a.instagram {
+  background-image: url("../img/instar.png");
+}
+#container #home .wrapper .title-box ul.link-list li a.smart {
+  background-image: url("../img/smart.png");
+}
+#container #home .wrapper .title-box ul.link-list li a.blog {
+  background-image: url("../img/blog.png");
+}
+#container #home .wrapper a.down-btn {
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+}
+#container #home .wrapper a.down-btn img {
+  width: 37px;
+  height: 37px;
+}
