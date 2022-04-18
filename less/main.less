@@ -3,56 +3,7 @@
 @import "import/variable.less";
 @import "import/mixin.less";
 
-/* EliceDigitalBaeum */
-@font-face {
-  font-family: 'EliceDigitalBaeum';
-  src: url('../fonts/elicedigitalbaeumTTF/EliceDigitalBaeum_Regular.ttf') format('truetype');
-  font-weight: 400;
-}
 
-@font-face {
-  font-family: 'EliceDigitalBaeum';
-  src: url('../fonts/elicedigitalbaeumTTF/EliceDigitalBaeum_Bold.ttf') format('truetype');
-  font-weight: 700;
-}
-
-/* GMarketSans */
-@font-face {
-  font-family: 'GMarketSans';
-  src: url('../fonts/gmarketsansTTF/GmarketSansTTFLight.ttf') format('truetype');
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: 'GMarketSans';
-  src: url('../fonts/gmarketsansTTF/GmarketSansTTFMedium.ttf') format('truetype');
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: 'GMarketSans';
-  src: url('../fonts/gmarketsansTTF/GmarketSansTTFBold.ttf') format('truetype');
-  font-weight: 700;
-}
-
-/* KoPubBatang */
-@font-face {
-  font-family: 'KoPubBatang';
-  src: url('../fonts/kopubdotumTTF/KoPubWorld Batang Light.ttf') format('truetype');
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: 'KoPubBatang';
-  src: url('../fonts/kopubdotumTTF/KoPubWorld Batang Medium.ttf') format('truetype');
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: 'KoPubBatang';
-  src: url('../fonts/kopubdotumTTF/KoPubWorld Batang Bold.ttf') format('truetype');
-  font-weight: 700;
-}
 
 /* KoPubDotum */
 @font-face {
@@ -73,24 +24,6 @@
   font-weight: 700;
 }
 
-/* SCDream */
-@font-face {
-  font-family: 'SCDream';
-  src: url('../fonts/scoredreamOTF/SCDream4.otf') format('opentype');
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: 'SCDream';
-  src: url('../fonts/scoredreamOTF/SCDream7.otf') format('opentype');
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: 'SCDream';
-  src: url('../fonts/scoredreamOTF/SCDream9.otf') format('opentype');
-  font-weight: 900;
-}
 
 /* Nixgon */
 @font-face {
@@ -125,6 +58,15 @@ body {
   width: 1200px;
   margin: 0 auto;
   position: relative;
+
+  h2 {
+    color: #fff;
+    font-size: 55px;
+    font-family: "Nixgon";
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -3px;
+  }
 }
 
 #header {
@@ -211,11 +153,13 @@ body {
 #container {
   #home {
     position: relative;
+
     .video-bg {
       width: 100%;
       height: 100%;
       position: absolute;
       z-index: 1;
+
       .background-cover {
         z-index: 2;
         position: absolute;
@@ -232,6 +176,7 @@ body {
     .wrapper {
       z-index: 2;
       height: 1140px;
+
       a.about-btn {
         position: absolute;
         left: 50%;
@@ -248,22 +193,27 @@ body {
         line-height: 50px;
         letter-spacing: -1px;
         text-align: center;
+
         &:hover {
           transform: translate(-50%, -50%) scale(1.1);
         }
       }
+
       .title-box {
         float: left;
         margin-top: 680px;
+
         p {
           color: #fff;
           font-family: "KoPubDotum";
           font-weight: 500;
+
           &.title {
             font-size: 40px;
             line-height: 50px;
             letter-spacing: -2px;
           }
+
           &.tag-list {
             font-size: 24px;
             line-height: 1;
@@ -271,28 +221,35 @@ body {
             margin: 5px 0 25px 0;
           }
         }
+
         ul.link-list {
           li {
             float: left;
             margin-right: 10px;
+
             a {
               display: block;
               width: 38px;
               height: 38px;
               background-size: cover;
               background-position: 50% 50%;
+
               &.facebook {
                 background-image: url("../img/facebook.png");
               }
+
               &.youtube {
                 background-image: url("../img/youtube.png");
               }
+
               &.instagram {
                 background-image: url("../img/instar.png");
               }
+
               &.smart {
                 background-image: url("../img/smart.png");
               }
+
               &.blog {
                 background-image: url("../img/blog.png");
               }
@@ -300,12 +257,14 @@ body {
           }
         }
       }
+
       a.down-btn {
         display: block;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
         bottom: 20px;
+
         img {
           width: 37px;
           height: 37px;
@@ -313,8 +272,421 @@ body {
       }
     }
   }
+
+  #about {
+    .wrapper {
+      padding-top: 84px;
+
+      h2 {
+        text-align: center;
+        margin-bottom: 200px;
+      }
+
+      .about-box {
+        margin-bottom: 120px;
+
+        &.right-box {
+          img.about-box-img {
+            float: left;
+            margin-right: 30px;
+          }
+
+          .about-box-line {
+            float: left;
+          }
+
+          .about-box-txt {
+            float: right;
+            text-align: right;
+          }
+        }
+
+        &.left-box {
+          img.about-box-img {
+            float: right;
+            margin-left: 30px;
+          }
+
+          .about-box-line {
+            float: right;
+          }
+
+          .about-box-txt {
+            float: left;
+            text-align: left;
+          }
+        }
+
+        img.about-box-img {
+          width: 500px;
+          height: 280px;
+          display: block;
+        }
+
+        .about-box-line {
+          height: 1px;
+          background-color: #fff;
+
+          &.long {
+            width: 330px;
+          }
+
+          &.short {
+            width: 260px;
+          }
+
+          &.middle {
+            width: 290px;
+          }
+        }
+
+        .about-box-txt {
+          h3.about-box-title {
+            margin-top: -20px;
+            color: @color-main;
+            font-size: 50px;
+            font-family: "Nixgon";
+            font-weight: 500;
+            line-height: 1;
+            letter-spacing: -3px;
+          }
+
+          p {
+            margin-top: 50px;
+            color: #fff;
+            font-size: 20px;
+            font-family: "KoPubDotum";
+            font-weight: 500;
+            line-height: 35px;
+
+            &.exception {
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #work {
+    .wrapper {
+      padding: 190px 0 410px;
+
+      h2 {
+        padding: 120px 0 210px;
+        text-align: left;
+      }
+
+      .youtube-wrapper {
+        float: left;
+
+        &:nth-of-type(2) {
+          float: right;
+        }
+
+        .inner-wrapper {
+          position: relative;
+          width: 580px;
+
+          iframe {
+            width: 580px;
+            height: 390px;
+          }
+
+          a {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        p {
+          margin-top: 20px;
+          color: #fff;
+          font-size: 32px;
+          font-family: "Nixgon";
+          font-weight: 500;
+          line-height: 1;
+          left: -2px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  #portfolio {
+    .wrapper {
+      h2 {
+        text-align: right;
+        padding-bottom: 100px;
+      }
+
+      ul.youtube-list {
+        li {
+          float: left;
+          margin: 0 16px 13px 0;
+
+          &:nth-child(4n) {
+            margin-right: 0;
+          }
+
+          a {
+            display: block;
+            position: relative;
+
+            &:hover {
+              div {
+                display: block;
+              }
+            }
+
+            img {
+              display: block;
+              width: 288px;
+              height: 162px;
+            }
+
+            div {
+              display: none;
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(0, 0, 0, 0.85);
+              text-align: center;
+              color: #fff;
+              font-size: 22px;
+              font-family: "Nixgon";
+              font-weight: 500;
+              line-height: 162px;
+              letter-spacing: -1px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #contact {
+    .wrapper {
+      padding: 140px 0 113px;
+
+      h2 {
+        text-align: left;
+        margin-bottom: 83px;
+      }
+
+      p.title {
+        color: #fff;
+        font-size: 25px;
+        font-family: "Nixgon";
+        font-weight: 500;
+        line-height: 1;
+        letter-spacing: -1.5px;
+        text-align: center;
+        margin-bottom: 105px;
+      }
+
+      ul.icon-list {
+        line-height: 0;
+        text-align: center;
+
+        li {
+          display: inline-block;
+          margin: 0 27.5px;
+
+          &:nth-child(1) {
+            img {
+              width: 78px;
+              height: 55px;
+              padding-bottom: 10px;
+            }
+          }
+
+          &:nth-child(2) {
+            img {
+              width: 45px;
+              height: 78px;
+            }
+          }
+
+          &:nth-child(3) {
+            img {
+              width: 75px;
+              height: 77px;
+            }
+          }
+
+          img {
+            display: block;
+            margin: 0 auto;
+          }
+
+          p {
+            margin-top: 35px;
+
+            span {
+              display: block;
+              color: #fff;
+              font-size: 20px;
+              font-family: "Nixgon";
+              font-weight: 500;
+              line-height: 1;
+              letter-spacing: -1px;
+              text-align: center;
+
+              &:nth-of-type(2) {
+                margin-top: 5px;
+              }
+            }
+
+          }
+        }
+      }
+
+      ul.sns-list {
+        margin-top: 105px;
+        text-align: center;
+        line-height: 0;
+
+        li {
+          display: inline-block;
+          margin: 0 25px;
+          &:nth-of-type(1) {
+            a {
+              background-image: url("../img/blog.png");
+            }
+            &:hover {
+              a {
+                background-image: url("../img/blog_on.png");
+              }
+            }
+          }
+          &:nth-of-type(2) {
+            a {
+              background-image: url("../img/facebook.png");
+            }
+            &:hover {
+              a {
+                background-image: url("../img/facebook_on.png");
+              }
+            }
+          }
+          &:nth-of-type(3) {
+            a {
+              background-image: url("../img/instar.png");
+            }
+            &:hover {
+              a {
+                background-image: url("../img/instar_on.png");
+              }
+            }
+          }
+
+          &:nth-of-type(4) {
+            a {
+              background-image: url("../img/youtube.png");
+            }
+            &:hover {
+              a {
+                background-image: url("../img/youtube_on.png");
+              }
+            }
+          }
+
+          &:nth-of-type(5) {
+            a {
+              background-image: url("../img/smart.png");
+            }
+
+            &:hover {
+              a {
+                background-image: url("../img/smart_on.png");
+              }
+            }
+          }
+
+          a {
+            display: block;
+            margin: 0 auto 17px;
+            width: 65px;
+            height: 65px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+          }
+          span {
+            color: #fff;
+            font-size: 20px;
+            font-family: "Nixgon";
+            font-weight: 500;
+            line-height: 1;
+            letter-spacing: -1px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
 }
 
 #footer {
+  .wrapper {
+    padding-bottom: 60px;
+    h3.logo {
+      float: right;
+      margin: 80px 0 0 28px;
+      img {
+        display: block;
+        width: 76px;
+        height: 49px;
+      }
+    }
+    .info-wrapper {
+      float: right;
+      margin-top: 68px;
+      text-align: right;
+      h4 {
+        color: #fff;
+        font-size: 20px;
+        font-family: "KoPubDotum";
+        font-weight: 500;
+        line-height: 1;
+        letter-spacing: -1px;
+        margin-bottom: 10px;
+      }
+      p {
+        color: #fff;
+        font-size: 15px;
+        font-family: "KoPubDotum";
+        font-weight: 500;
+        line-height: 1;
+        letter-spacing: -1px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
 
+.youtube-modal-wrapper {
+  z-index: 99999;
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  iframe {
+    width: 1140px;
+    height: 600px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
