@@ -54,6 +54,11 @@ body {
   margin: 0 auto;
   position: relative;
 }
+@media only screen and (max-width: 800px) {
+  .wrapper {
+    width: calc(100% - 40px);
+  }
+}
 .wrapper h2 {
   color: #fff;
   font-size: 55px;
@@ -61,6 +66,12 @@ body {
   font-weight: 500;
   line-height: 1;
   letter-spacing: -3px;
+}
+@media only screen and (max-width: 800px) {
+  .wrapper h2 {
+    font-size: 22px;
+    letter-spacing: -1px;
+  }
 }
 #header {
   z-index: 9999;
@@ -73,35 +84,102 @@ body {
 #header .wrapper {
   height: 80px;
 }
+@media only screen and (max-width: 800px) {
+  #header .wrapper {
+    height: 70px;
+  }
+}
 #header .wrapper h1.logo {
   float: left;
   margin-top: 15px;
 }
+@media only screen and (max-width: 800px) {
+  #header .wrapper h1.logo {
+    float: none;
+    margin-top: 5px;
+  }
+}
 #header .wrapper h1.logo a {
   display: block;
+}
+@media only screen and (max-width: 800px) {
+  #header .wrapper h1.logo a {
+    display: block;
+    width: 39px;
+    margin: 0 auto;
+  }
 }
 #header .wrapper h1.logo a img {
   width: 76px;
   height: 49px;
 }
+@media only screen and (max-width: 800px) {
+  #header .wrapper h1.logo a img {
+    width: 39px;
+    height: 25px;
+  }
+}
 #header .wrapper #nav {
   float: left;
   margin: 30px 0 0 228px;
 }
+@media only screen and (max-width: 800px) {
+  #header .wrapper #nav {
+    float: none;
+    margin: 17px 0 0 0;
+  }
+}
+@media only screen and (max-width: 800px) {
+  #header .wrapper #nav ul.nav-list {
+    line-height: 0;
+    text-align: center;
+  }
+}
 #header .wrapper #nav ul.nav-list li {
   float: left;
+}
+@media only screen and (max-width: 800px) {
+  #header .wrapper #nav ul.nav-list li {
+    float: none;
+    display: inline-block;
+  }
 }
 #header .wrapper #nav ul.nav-list li:nth-child(1) {
   margin-right: 99px;
 }
+@media only screen and (max-width: 800px) {
+  #header .wrapper #nav ul.nav-list li:nth-child(1) {
+    margin: 0 8px;
+  }
+}
 #header .wrapper #nav ul.nav-list li:nth-child(2) {
   margin-right: 96px;
+}
+@media only screen and (max-width: 800px) {
+  #header .wrapper #nav ul.nav-list li:nth-child(2) {
+    margin: 0 8px;
+  }
 }
 #header .wrapper #nav ul.nav-list li:nth-child(3) {
   margin-right: 82px;
 }
+@media only screen and (max-width: 800px) {
+  #header .wrapper #nav ul.nav-list li:nth-child(3) {
+    margin: 0 8px;
+  }
+}
 #header .wrapper #nav ul.nav-list li:nth-child(4) {
   margin-right: 74px;
+}
+@media only screen and (max-width: 800px) {
+  #header .wrapper #nav ul.nav-list li:nth-child(4) {
+    margin: 0 8px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  #header .wrapper #nav ul.nav-list li:nth-child(5) {
+    margin: 0 8px;
+  }
 }
 #header .wrapper #nav ul.nav-list li a {
   display: block;
@@ -113,6 +191,11 @@ body {
   line-height: 20px;
   letter-spacing: -1px;
 }
+@media only screen and (max-width: 800px) {
+  #header .wrapper #nav ul.nav-list li a {
+    font-size: 10.5px;
+  }
+}
 #header .wrapper #nav ul.nav-list li a.checked {
   color: #ffbb00;
   font-weight: 700;
@@ -121,6 +204,11 @@ body {
   display: block;
   float: right;
   margin-top: 24px;
+}
+@media only screen and (max-width: 800px) {
+  #header .wrapper a.kakao-friend {
+    display: none;
+  }
 }
 #header .wrapper a.kakao-friend img {
   width: 32px;
@@ -150,6 +238,11 @@ body {
   z-index: 2;
   height: 1140px;
 }
+@media only screen and (max-width: 800px) {
+  #container #home .wrapper {
+    height: 550px;
+  }
+}
 #container #home .wrapper a.about-btn {
   position: absolute;
   left: 50%;
@@ -167,12 +260,25 @@ body {
   letter-spacing: -1px;
   text-align: center;
 }
+@media only screen and (max-width: 800px) {
+  #container #home .wrapper a.about-btn {
+    width: 80px;
+    height: 27px;
+    line-height: 27px;
+    font-size: 9px;
+  }
+}
 #container #home .wrapper a.about-btn:hover {
   transform: translate(-50%, -50%) scale(1.1);
 }
 #container #home .wrapper .title-box {
   float: left;
   margin-top: 680px;
+}
+@media only screen and (max-width: 800px) {
+  #container #home .wrapper .title-box {
+    margin-top: 170px;
+  }
 }
 #container #home .wrapper .title-box p {
   color: #fff;
@@ -184,11 +290,29 @@ body {
   line-height: 50px;
   letter-spacing: -2px;
 }
+@media only screen and (max-width: 800px) {
+  #container #home .wrapper .title-box p.title {
+    font-size: 16.5px;
+    line-height: 22px;
+    letter-spacing: -1px;
+  }
+}
 #container #home .wrapper .title-box p.tag-list {
   font-size: 24px;
   line-height: 1;
   letter-spacing: -1px;
   margin: 5px 0 25px 0;
+}
+@media only screen and (max-width: 800px) {
+  #container #home .wrapper .title-box p.tag-list {
+    font-size: 9px;
+    letter-spacing: -0.5px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  #container #home .wrapper .title-box ul.link-list {
+    display: none;
+  }
 }
 #container #home .wrapper .title-box ul.link-list li {
   float: left;
@@ -223,23 +347,69 @@ body {
   transform: translateX(-50%);
   bottom: 20px;
 }
+@media only screen and (max-width: 800px) {
+  #container #home .wrapper a.down-btn {
+    bottom: 30px;
+  }
+}
 #container #home .wrapper a.down-btn img {
   width: 37px;
   height: 37px;
 }
+@media only screen and (max-width: 800px) {
+  #container #home .wrapper a.down-btn img {
+    width: 20px;
+    height: 20px;
+  }
+}
 #container #about .wrapper {
   padding-top: 84px;
+}
+@media only screen and (max-width: 800px) {
+  #container #about .wrapper {
+    padding-top: 45px;
+  }
 }
 #container #about .wrapper h2 {
   text-align: center;
   margin-bottom: 200px;
 }
+@media only screen and (max-width: 800px) {
+  #container #about .wrapper h2 {
+    margin-bottom: 100px;
+  }
+}
 #container #about .wrapper .about-box {
   margin-bottom: 120px;
+}
+@media only screen and (max-width: 800px) {
+  #container #about .wrapper .about-box {
+    margin-bottom: 80px;
+    position: relative;
+  }
+  #container #about .wrapper .about-box:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -20px;
+    width: 162px;
+    height: 1px;
+    background-color: #fff;
+  }
+}
+@media only screen and (max-width: 800px) {
+  #container #about .wrapper .about-box.right-box:before {
+    left: -20px;
+  }
 }
 #container #about .wrapper .about-box.right-box img.about-box-img {
   float: left;
   margin-right: 30px;
+}
+@media only screen and (max-width: 800px) {
+  #container #about .wrapper .about-box.right-box img.about-box-img {
+    margin-right: 0;
+  }
 }
 #container #about .wrapper .about-box.right-box .about-box-line {
   float: left;
@@ -248,9 +418,19 @@ body {
   float: right;
   text-align: right;
 }
+@media only screen and (max-width: 800px) {
+  #container #about .wrapper .about-box.left-box:before {
+    right: -20px;
+  }
+}
 #container #about .wrapper .about-box.left-box img.about-box-img {
   float: right;
   margin-left: 30px;
+}
+@media only screen and (max-width: 800px) {
+  #container #about .wrapper .about-box.left-box img.about-box-img {
+    margin-left: 0;
+  }
 }
 #container #about .wrapper .about-box.left-box .about-box-line {
   float: right;
@@ -264,9 +444,20 @@ body {
   height: 280px;
   display: block;
 }
+@media only screen and (max-width: 800px) {
+  #container #about .wrapper .about-box img.about-box-img {
+    width: 142px;
+    height: 80px;
+  }
+}
 #container #about .wrapper .about-box .about-box-line {
   height: 1px;
   background-color: #fff;
+}
+@media only screen and (max-width: 800px) {
+  #container #about .wrapper .about-box .about-box-line {
+    display: none;
+  }
 }
 #container #about .wrapper .about-box .about-box-line.long {
   width: 330px;
@@ -286,6 +477,13 @@ body {
   line-height: 1;
   letter-spacing: -3px;
 }
+@media only screen and (max-width: 800px) {
+  #container #about .wrapper .about-box .about-box-txt h3.about-box-title {
+    margin-top: -30px;
+    font-size: 20px;
+    letter-spacing: -1px;
+  }
+}
 #container #about .wrapper .about-box .about-box-txt p {
   margin-top: 50px;
   color: #fff;
@@ -294,29 +492,80 @@ body {
   font-weight: 500;
   line-height: 35px;
 }
+@media only screen and (max-width: 800px) {
+  #container #about .wrapper .about-box .about-box-txt p {
+    font-size: 8px;
+    line-height: 1.8;
+    margin-top: 20px;
+  }
+}
 #container #about .wrapper .about-box .about-box-txt p.exception {
   margin-top: 20px;
 }
+@media only screen and (max-width: 800px) {
+  #container #about .wrapper .about-box .about-box-txt p.exception {
+    margin-top: 10px;
+  }
+}
 #container #work .wrapper {
   padding: 190px 0 410px;
+}
+@media only screen and (max-width: 800px) {
+  #container #work .wrapper {
+    padding: 15px 0 70px;
+  }
 }
 #container #work .wrapper h2 {
   padding: 120px 0 210px;
   text-align: left;
 }
+@media only screen and (max-width: 800px) {
+  #container #work .wrapper h2 {
+    padding: 0 0 35px;
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: -1px;
+  }
+  #container #work .wrapper h2 span {
+    display: block;
+  }
+}
 #container #work .wrapper .youtube-wrapper {
   float: left;
 }
+@media only screen and (max-width: 800px) {
+  #container #work .wrapper .youtube-wrapper {
+    float: none;
+    margin: 0 auto;
+    width: 220px;
+  }
+}
 #container #work .wrapper .youtube-wrapper:nth-of-type(2) {
   float: right;
+}
+@media only screen and (max-width: 800px) {
+  #container #work .wrapper .youtube-wrapper:nth-of-type(2) {
+    display: none;
+  }
 }
 #container #work .wrapper .youtube-wrapper .inner-wrapper {
   position: relative;
   width: 580px;
 }
+@media only screen and (max-width: 800px) {
+  #container #work .wrapper .youtube-wrapper .inner-wrapper {
+    width: 100%;
+  }
+}
 #container #work .wrapper .youtube-wrapper .inner-wrapper iframe {
   width: 580px;
   height: 390px;
+}
+@media only screen and (max-width: 800px) {
+  #container #work .wrapper .youtube-wrapper .inner-wrapper iframe {
+    width: 220px;
+    height: 125px;
+  }
 }
 #container #work .wrapper .youtube-wrapper .inner-wrapper a {
   position: absolute;
@@ -335,16 +584,40 @@ body {
   left: -2px;
   text-align: center;
 }
+@media only screen and (max-width: 800px) {
+  #container #work .wrapper .youtube-wrapper p {
+    display: none;
+  }
+}
 #container #portfolio .wrapper h2 {
   text-align: right;
   padding-bottom: 100px;
+}
+@media only screen and (max-width: 800px) {
+  #container #portfolio .wrapper h2 {
+    text-align: center;
+    padding: 35px 0 60px;
+  }
 }
 #container #portfolio .wrapper ul.youtube-list li {
   float: left;
   margin: 0 16px 13px 0;
 }
+@media only screen and (max-width: 800px) {
+  #container #portfolio .wrapper ul.youtube-list li {
+    margin: 0 4px 8px 16px;
+  }
+  #container #portfolio .wrapper ul.youtube-list li:nth-child(2n) {
+    margin: 0 16px 8px 4px;
+  }
+}
 #container #portfolio .wrapper ul.youtube-list li:nth-child(4n) {
   margin-right: 0;
+}
+@media only screen and (max-width: 800px) {
+  #container #portfolio .wrapper ul.youtube-list li:nth-child(4n) {
+    margin: 0 16px 8px 4px;
+  }
 }
 #container #portfolio .wrapper ul.youtube-list li a {
   display: block;
@@ -357,6 +630,12 @@ body {
   display: block;
   width: 288px;
   height: 162px;
+}
+@media only screen and (max-width: 800px) {
+  #container #portfolio .wrapper ul.youtube-list li a img {
+    width: 120px;
+    height: 65px;
+  }
 }
 #container #portfolio .wrapper ul.youtube-list li a div {
   display: none;
@@ -377,9 +656,20 @@ body {
 #container #contact .wrapper {
   padding: 140px 0 113px;
 }
+@media only screen and (max-width: 800px) {
+  #container #contact .wrapper {
+    padding: 105px 0 75px;
+  }
+}
 #container #contact .wrapper h2 {
   text-align: left;
   margin-bottom: 83px;
+}
+@media only screen and (max-width: 800px) {
+  #container #contact .wrapper h2 {
+    text-align: center;
+    margin-bottom: 55px;
+  }
 }
 #container #contact .wrapper p.title {
   color: #fff;
@@ -391,6 +681,13 @@ body {
   text-align: center;
   margin-bottom: 105px;
 }
+@media only screen and (max-width: 800px) {
+  #container #contact .wrapper p.title {
+    font-size: 15px;
+    letter-spacing: -1px;
+    margin-bottom: 37px;
+  }
+}
 #container #contact .wrapper ul.icon-list {
   line-height: 0;
   text-align: center;
@@ -399,18 +696,44 @@ body {
   display: inline-block;
   margin: 0 27.5px;
 }
+@media only screen and (max-width: 800px) {
+  #container #contact .wrapper ul.icon-list li {
+    display: block;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+}
 #container #contact .wrapper ul.icon-list li:nth-child(1) img {
   width: 78px;
   height: 55px;
   padding-bottom: 10px;
 }
+@media only screen and (max-width: 800px) {
+  #container #contact .wrapper ul.icon-list li:nth-child(1) img {
+    width: 37px;
+    height: 26px;
+    padding-bottom: 5px;
+  }
+}
 #container #contact .wrapper ul.icon-list li:nth-child(2) img {
   width: 45px;
   height: 78px;
 }
+@media only screen and (max-width: 800px) {
+  #container #contact .wrapper ul.icon-list li:nth-child(2) img {
+    width: 21px;
+    height: 37px;
+  }
+}
 #container #contact .wrapper ul.icon-list li:nth-child(3) img {
   width: 75px;
   height: 77px;
+}
+@media only screen and (max-width: 800px) {
+  #container #contact .wrapper ul.icon-list li:nth-child(3) img {
+    width: 36px;
+    height: 37px;
+  }
 }
 #container #contact .wrapper ul.icon-list li img {
   display: block;
@@ -418,6 +741,11 @@ body {
 }
 #container #contact .wrapper ul.icon-list li p {
   margin-top: 35px;
+}
+@media only screen and (max-width: 800px) {
+  #container #contact .wrapper ul.icon-list li p {
+    margin-top: 11px;
+  }
 }
 #container #contact .wrapper ul.icon-list li p span {
   display: block;
@@ -429,6 +757,12 @@ body {
   letter-spacing: -1px;
   text-align: center;
 }
+@media only screen and (max-width: 800px) {
+  #container #contact .wrapper ul.icon-list li p span {
+    font-size: 10px;
+    letter-spacing: -0.5px;
+  }
+}
 #container #contact .wrapper ul.icon-list li p span:nth-of-type(2) {
   margin-top: 5px;
 }
@@ -437,9 +771,25 @@ body {
   text-align: center;
   line-height: 0;
 }
+@media only screen and (max-width: 800px) {
+  #container #contact .wrapper ul.sns-list {
+    margin: 0 auto;
+    width: 280px;
+  }
+}
 #container #contact .wrapper ul.sns-list li {
   display: inline-block;
   margin: 0 25px;
+}
+@media only screen and (max-width: 800px) {
+  #container #contact .wrapper ul.sns-list li {
+    width: 70px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  #container #contact .wrapper ul.sns-list li:nth-of-type(1) {
+    margin: 0 0 30px 0;
+  }
 }
 #container #contact .wrapper ul.sns-list li:nth-of-type(1) a {
   background-image: url("../img/blog.png");
@@ -447,11 +797,21 @@ body {
 #container #contact .wrapper ul.sns-list li:nth-of-type(1):hover a {
   background-image: url("../img/blog_on.png");
 }
+@media only screen and (max-width: 800px) {
+  #container #contact .wrapper ul.sns-list li:nth-of-type(2) {
+    margin: 0 10px 30px 15px;
+  }
+}
 #container #contact .wrapper ul.sns-list li:nth-of-type(2) a {
   background-image: url("../img/facebook.png");
 }
 #container #contact .wrapper ul.sns-list li:nth-of-type(2):hover a {
   background-image: url("../img/facebook_on.png");
+}
+@media only screen and (max-width: 800px) {
+  #container #contact .wrapper ul.sns-list li:nth-of-type(3) {
+    margin: 0 0 30px 10px;
+  }
 }
 #container #contact .wrapper ul.sns-list li:nth-of-type(3) a {
   background-image: url("../img/instar.png");
@@ -459,11 +819,21 @@ body {
 #container #contact .wrapper ul.sns-list li:nth-of-type(3):hover a {
   background-image: url("../img/instar_on.png");
 }
+@media only screen and (max-width: 800px) {
+  #container #contact .wrapper ul.sns-list li:nth-of-type(4) {
+    margin: 0 20px 0 0;
+  }
+}
 #container #contact .wrapper ul.sns-list li:nth-of-type(4) a {
   background-image: url("../img/youtube.png");
 }
 #container #contact .wrapper ul.sns-list li:nth-of-type(4):hover a {
   background-image: url("../img/youtube_on.png");
+}
+@media only screen and (max-width: 800px) {
+  #container #contact .wrapper ul.sns-list li:nth-of-type(5) {
+    margin: 0;
+  }
 }
 #container #contact .wrapper ul.sns-list li:nth-of-type(5) a {
   background-image: url("../img/smart.png");
@@ -473,12 +843,18 @@ body {
 }
 #container #contact .wrapper ul.sns-list li a {
   display: block;
-  margin: 0 auto 17px;
+  margin: 0 auto 13px;
   width: 65px;
   height: 65px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+}
+@media only screen and (max-width: 800px) {
+  #container #contact .wrapper ul.sns-list li a {
+    width: 43px;
+    height: 43px;
+  }
 }
 #container #contact .wrapper ul.sns-list li span {
   color: #fff;
@@ -489,22 +865,53 @@ body {
   letter-spacing: -1px;
   text-align: center;
 }
+@media only screen and (max-width: 800px) {
+  #container #contact .wrapper ul.sns-list li span {
+    font-size: 13.5px;
+    letter-spacing: -0.5px;
+  }
+}
 #footer .wrapper {
   padding-bottom: 60px;
+}
+@media only screen and (max-width: 800px) {
+  #footer .wrapper {
+    padding-bottom: 17px;
+  }
 }
 #footer .wrapper h3.logo {
   float: right;
   margin: 80px 0 0 28px;
+}
+@media only screen and (max-width: 800px) {
+  #footer .wrapper h3.logo {
+    float: none;
+    margin: 22px 0 0 0;
+    text-align: right;
+  }
 }
 #footer .wrapper h3.logo img {
   display: block;
   width: 76px;
   height: 49px;
 }
+@media only screen and (max-width: 800px) {
+  #footer .wrapper h3.logo img {
+    display: inline;
+    width: 40px;
+    height: 25px;
+  }
+}
 #footer .wrapper .info-wrapper {
   float: right;
   margin-top: 68px;
   text-align: right;
+}
+@media only screen and (max-width: 800px) {
+  #footer .wrapper .info-wrapper {
+    float: none;
+    margin-top: 12px;
+  }
 }
 #footer .wrapper .info-wrapper h4 {
   color: #fff;
@@ -515,6 +922,13 @@ body {
   letter-spacing: -1px;
   margin-bottom: 10px;
 }
+@media only screen and (max-width: 800px) {
+  #footer .wrapper .info-wrapper h4 {
+    font-size: 12px;
+    margin-bottom: 7px;
+    letter-spacing: -0.5px;
+  }
+}
 #footer .wrapper .info-wrapper p {
   color: #fff;
   font-size: 15px;
@@ -523,6 +937,13 @@ body {
   line-height: 1;
   letter-spacing: -1px;
   margin-bottom: 10px;
+}
+@media only screen and (max-width: 800px) {
+  #footer .wrapper .info-wrapper p {
+    font-size: 10px;
+    margin-bottom: 5px;
+    letter-spacing: -1px;
+  }
 }
 .youtube-modal-wrapper {
   z-index: 99999;

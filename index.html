@@ -35,7 +35,7 @@
 <div id="container">
     <div id="home">
         <div class="video-bg">
-            <div id="youtubeBG" data-vbg="https://www.youtube.com/watch?v=IuwTDgXIIRE"></div>
+            <div id="youtubeBG" data-vbg="https://www.youtube.com/watch?v=IuwTDgXIIRE" data-vbg-fit-box="true" data-vbg-mobile="true"></div>
             <div class="background-cover"></div>
         </div>
         <div class="wrapper">
@@ -132,7 +132,7 @@
     </div>
     <div id="work">
         <div class="wrapper clearfix">
-            <h2>HANJUL YOUTUBE PROGRAM</h2>
+            <h2>HANJUL <span>YOUTUBE PROGRAM</span></h2>
             <div class="youtube-wrapper">
                 <div class="inner-wrapper">
                     <div id="youtubePlayerA"></div>
@@ -271,8 +271,6 @@
             var portfolioTop = $("#portfolio").offset().top;
             var contactTop = $("#contact").offset().top;
             var nav = $("#header #nav li a");
-            console.log("header = " + headerTop);
-            console.log("about = " + aboutTop);
             if(headerTop<aboutTop) {
                 nav.removeClass("checked");
                 $("#header #nav li a[href='#home']").addClass("checked");
