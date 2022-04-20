@@ -491,7 +491,7 @@ body {
             @media @mobile {
               margin-top: -30px;
               font-size: 20px;
-              letter-spacing: -1px;
+              letter-spacing: -2px;
             }
           }
 
@@ -502,10 +502,19 @@ body {
             font-family: "KoPubDotum";
             font-weight: 500;
             line-height: 35px;
+            span.pc-block {
+              display: block;
+            }
             @media @mobile {
               font-size: 8px;
               line-height: 1.8;
               margin-top: 20px;
+              span.mobile-block {
+                display: block;
+              }
+              span.pc-block {
+                display: none;
+              }
             }
 
             &.exception {
@@ -610,6 +619,10 @@ body {
       }
 
       ul.youtube-list {
+        @media @mobile {
+          width: 280px;
+          margin:0 auto;
+        }
         li {
           float: left;
           margin: 0 16px 13px 0;

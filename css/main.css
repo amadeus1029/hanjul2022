@@ -481,7 +481,7 @@ body {
   #container #about .wrapper .about-box .about-box-txt h3.about-box-title {
     margin-top: -30px;
     font-size: 20px;
-    letter-spacing: -1px;
+    letter-spacing: -2px;
   }
 }
 #container #about .wrapper .about-box .about-box-txt p {
@@ -492,11 +492,20 @@ body {
   font-weight: 500;
   line-height: 35px;
 }
+#container #about .wrapper .about-box .about-box-txt p span.pc-block {
+  display: block;
+}
 @media only screen and (max-width: 800px) {
   #container #about .wrapper .about-box .about-box-txt p {
     font-size: 8px;
     line-height: 1.8;
     margin-top: 20px;
+  }
+  #container #about .wrapper .about-box .about-box-txt p span.mobile-block {
+    display: block;
+  }
+  #container #about .wrapper .about-box .about-box-txt p span.pc-block {
+    display: none;
   }
 }
 #container #about .wrapper .about-box .about-box-txt p.exception {
@@ -597,6 +606,12 @@ body {
   #container #portfolio .wrapper h2 {
     text-align: center;
     padding: 35px 0 60px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  #container #portfolio .wrapper ul.youtube-list {
+    width: 280px;
+    margin: 0 auto;
   }
 }
 #container #portfolio .wrapper ul.youtube-list li {
