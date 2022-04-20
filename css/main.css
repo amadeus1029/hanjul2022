@@ -590,7 +590,7 @@ body {
   font-family: "Nixgon";
   font-weight: 500;
   line-height: 1;
-  left: -2px;
+  letter-spacing: -2px;
   text-align: center;
 }
 @media only screen and (max-width: 800px) {
@@ -667,6 +667,12 @@ body {
   font-weight: 500;
   line-height: 162px;
   letter-spacing: -1px;
+}
+@media only screen and (max-width: 800px) {
+  #container #portfolio .wrapper ul.youtube-list li a div {
+    font-size: 12px;
+    line-height: 65px;
+  }
 }
 #container #contact .wrapper {
   padding: 140px 0 113px;
