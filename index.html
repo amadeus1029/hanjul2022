@@ -6,12 +6,22 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hanjul</title>
+
+    <!-- css -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
-    <link href="css/YouTubePopUp.css" rel="stylesheet" type="text/css">
+
+    <!-- jquery -->
     <script src="js/jquery/jquery-1.12.4.min.js"></script>
+
+    <!-- youtube popup and bg -->
+    <link href="css/YouTubePopUp.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="js/YouTubePopUp.jquery.js"></script>
     <script type="text/javascript" src="js/jquery.youtube-background.min.js"></script>
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </head>
 <body>
 <!-- 페이스북 계정 없음, 몇개 비공개 영상 있음, 스마트스토어링크 비어있음 -->
@@ -35,7 +45,8 @@
 <div id="container">
     <div id="home">
         <div class="video-bg">
-            <div id="youtubeBG" data-vbg="https://www.youtube.com/watch?v=IuwTDgXIIRE" data-vbg-fit-box="true" data-vbg-mobile="true"></div>
+            <div id="youtubeBG" data-vbg="https://www.youtube.com/watch?v=IuwTDgXIIRE" data-vbg-fit-box="true"
+                 data-vbg-mobile="true"></div>
             <div class="background-cover"></div>
         </div>
         <div class="wrapper">
@@ -45,7 +56,8 @@
                 <p class="tag-list">#촬영 #편집 #그래픽 #디자인 #마케팅</p>
                 <ul class="link-list clearfix">
                     <li>
-                        <a class="facebook" href="https://m.facebook.com/videoteamhanjul/?ref=bookmarks" target="_blank">
+                        <a class="facebook" href="https://m.facebook.com/videoteamhanjul/?ref=bookmarks"
+                           target="_blank">
                         </a>
                     </li>
                     <li>
@@ -133,19 +145,34 @@
     <div id="work">
         <div class="wrapper clearfix">
             <h2>HANJUL <span>YOUTUBE PROGRAM</span></h2>
-            <div class="youtube-wrapper">
-                <div class="inner-wrapper">
-                    <div id="youtubePlayerA"></div>
-                    <a class="youtube" href="#none" onclick="makeYoutubeModal(event,$(this))"></a>
+            <div class="swiper-section">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="inner-wrapper">
+                                <div class="youtube-play-list youtube-player-first"></div>
+                                <div class="youtube" onclick="makeYoutubeModal(event,$(this))"></div>
+                            </div>
+                            <p>편집자의 소양</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="inner-wrapper">
+                                <div class="youtube-play-list youtube-player-second"></div>
+                                <div class="youtube" onclick="makeYoutubeModal(event,$(this))"></div>
+                            </div>
+                            <p>한줄포차</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="inner-wrapper">
+                                <div class="youtube-play-list youtube-player-third"></div>
+                                <div class="youtube" onclick="makeYoutubeModal(event,$(this))"></div>
+                            </div>
+                            <p>한줄스토어</p>
+                        </div>
+                    </div>
                 </div>
-                <p>편집자의 소양</p>
-            </div>
-            <div class="youtube-wrapper">
-                <div class="inner-wrapper">
-                    <div id="youtubePlayerB"></div>
-                    <a class="youtube" href="#none" onclick="makeYoutubeModal(event,$(this))"></a>
-                </div>
-                <p>한줄스토어</p>
+                <div class="swiper-button-arrow swiper-button-arrow-next"></div>
+                <div class="swiper-button-arrow swiper-button-arrow-prev"></div>
             </div>
         </div>
     </div>
@@ -178,21 +205,54 @@
                     </a>
                 </li>
                 <li><a class="youtube-bind" href="https://www.youtube.com/watch?v=BYqux65Y0_8&t=3s
-"><img src="img/youtube-05.png" alt=""><div>한국후지공업
-                </div></a></li>
+"><img src="img/youtube-05.png" alt="">
+                    <div>한국후지공업
+                    </div>
+                </a></li>
                 <li><a class="youtube-bind" href="https://www.youtube.com/watch?v=gmB7zAKWqD4
-"><img src="img/youtube-06.png" alt=""><div>취슐랭가이드</div></a></li>
+"><img src="img/youtube-06.png" alt="">
+                    <div>취슐랭가이드</div>
+                </a></li>
                 <li><a class="youtube-bind" href="https://www.youtube.com/watch?v=hYWcLpWPSZ8
-"><img src="img/youtube-07.png" alt=""><div>쇼파</div></a></li>
-                <li><a class="youtube-bind" href="https://www.youtube.com/watch?v=Wgou-ByKfks"><img src="img/youtube-08.png" alt=""><div>화장품</div></a></li>
-                <li><a class="youtube-bind" href="https://www.youtube.com/watch?v=SuoZDgc4aAM&t=370s"><img src="img/youtube-09.png" alt=""><div>어흥탐정</div></a></li>
-                <li><a class="youtube-bind" href="https://www.youtube.com/watch?v=NuZo7a_qRyM&t=179s"><img src="img/youtube-10.png" alt=""><div>영비보살</div></a></li>
-                <li><a class="youtube-bind" href="https://www.youtube.com/watch?v=leEb45f2fGI&t=42s"><img src="img/youtube-11.png" alt=""><div>경기도육상연맹</div></a></li>
-                <li><a class="youtube-bind" href="https://www.youtube.com/watch?v=lgfIJQXatUA"><img src="img/youtube-12.png" alt=""><div>배꼽빌라</div></a></li>
-                <li><a class="youtube-bind" href="https://www.youtube.com/watch?v=r6KCneCFVRs"><img src="img/youtube-13.png" alt=""><div>에일리 노래 영상</div></a></li>
-                <li><a class="youtube-bind" href="https://www.youtube.com/watch?v=-ds7bTtvcss"><img src="img/youtube-14.png" alt=""><div>롯데홈쇼핑</div></a></li>
-                <li><a class="youtube-bind" href="https://www.youtube.com/watch?v=DH0Bc9STMvA&t=73s"><img src="img/youtube-15.png" alt=""><div>레지나뷰티</div></a></li>
-                <li><a class="youtube-bind" href="https://www.youtube.com/watch?v=h6E59HZCr1c"><img src="img/youtube-16.png" alt=""><div>이재훈의 훈스토랑</div></a></li>
+"><img src="img/youtube-07.png" alt="">
+                    <div>쇼파</div>
+                </a></li>
+                <li><a class="youtube-bind" href="https://www.youtube.com/watch?v=Wgou-ByKfks"><img
+                        src="img/youtube-08.png" alt="">
+                    <div>화장품</div>
+                </a></li>
+                <li><a class="youtube-bind" href="https://www.youtube.com/watch?v=SuoZDgc4aAM&t=370s"><img
+                        src="img/youtube-09.png" alt="">
+                    <div>어흥탐정</div>
+                </a></li>
+                <li><a class="youtube-bind" href="https://www.youtube.com/watch?v=NuZo7a_qRyM&t=179s"><img
+                        src="img/youtube-10.png" alt="">
+                    <div>영비보살</div>
+                </a></li>
+                <li><a class="youtube-bind" href="https://www.youtube.com/watch?v=leEb45f2fGI&t=42s"><img
+                        src="img/youtube-11.png" alt="">
+                    <div>경기도육상연맹</div>
+                </a></li>
+                <li><a class="youtube-bind" href="https://www.youtube.com/watch?v=lgfIJQXatUA"><img
+                        src="img/youtube-12.png" alt="">
+                    <div>배꼽빌라</div>
+                </a></li>
+                <li><a class="youtube-bind" href="https://www.youtube.com/watch?v=r6KCneCFVRs"><img
+                        src="img/youtube-13.png" alt="">
+                    <div>에일리 노래 영상</div>
+                </a></li>
+                <li><a class="youtube-bind" href="https://www.youtube.com/watch?v=-ds7bTtvcss"><img
+                        src="img/youtube-14.png" alt="">
+                    <div>롯데홈쇼핑</div>
+                </a></li>
+                <li><a class="youtube-bind" href="https://www.youtube.com/watch?v=DH0Bc9STMvA&t=73s"><img
+                        src="img/youtube-15.png" alt="">
+                    <div>레지나뷰티</div>
+                </a></li>
+                <li><a class="youtube-bind" href="https://www.youtube.com/watch?v=h6E59HZCr1c"><img
+                        src="img/youtube-16.png" alt="">
+                    <div>이재훈의 훈스토랑</div>
+                </a></li>
             </ul>
         </div>
     </div>
@@ -213,10 +273,11 @@
             </ul>
             <ul class="sns-list clearfix">
                 <li><a href="https://blog.naver.com/han_jul" target="_blank"></a><span>BLOG</span></li>
-                <li><a href="https://m.facebook.com/videoteamhanjul/?ref=bookmarks" target="_blank"></a><span>FACEBOOK</span></li>
+                <li><a href="https://m.facebook.com/videoteamhanjul/?ref=bookmarks"
+                       target="_blank"></a><span>FACEBOOK</span></li>
                 <li><a href="https://www.instagram.com/_han_jul_/" target="_blank"></a><span>INSTAGRAM</span></li>
                 <li><a href=https://www.youtube.com/channel/UCi7_EObK0MfwMju5FSeAarw"
-                    target="_blank"></a><span>YOUTUBE</span></li>
+                       target="_blank"></a><span>YOUTUBE</span></li>
                 <li><a href="#none"></a><span>SMARTSTORE</span></li>
             </ul>
         </div>
@@ -233,54 +294,62 @@
     </div>
 </footer>
 <script>
-    var youtubePlayerA, youtubePlayerB;
-    var indexA = getRandomIntInclusive(1, 10);
-    var indexB = getRandomIntInclusive(1, 10);
-
-    function getRandomIntInclusive(min, max) {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min + 1)) + min; //최댓값도 포함, 최솟값도 포함
-    }
-
-    function onYouTubePlayerAPIReady() {
-        youtubePlayerA = new YT.Player('youtubePlayerA', {
-            playerVars: {
-                listType: 'playlist',
-                list: 'PLif_jr7pPZAAzMBPSUMXW34hrWG2Wd5yG',
-                index: indexA
-            }
-        });
-        youtubePlayerB = new YT.Player('youtubePlayerB', {
-            playerVars: {
-                listType: 'playlist',
-                list: 'PLif_jr7pPZAAzMBPSUMXW34hrWG2Wd5yG',
-                index: indexB
-            }
-        });
-    }
 </script>
 <script>
     $(document).ready(function () {
+        document.cookie = "SameSite=None; Secure"
+
+        //swiper slide
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            loop: true,
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                    slidesPerView: 1
+                },
+                800: {
+                    slidesPerView: 3,
+                    spaceBetween: 75
+                }
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-arrow-next',
+                prevEl: '.swiper-button-arrow-prev',
+            }
+        });
+
+        //유튜브 백그라운드
         $('#youtubeBG').youtube_background({});
-        $("a.youtube-bind").YouTubePopUp( { autoplay: 0 } );
-        $(window).scroll(function (){
+
+        //유튜브 팝업
+        $("a.youtube-bind").YouTubePopUp({autoplay: 0});
+
+        //유튜브 플레이리스트 iframe initiate
+        $.getScript("https://www.youtube.com/iframe_api", function () {
+            makeYoutubeIframe();
+        });
+
+        //스크롤 위치에 따라 네비게이션 버튼 colored
+        $(window).scroll(function () {
             var headerTop = $("#header").offset().top;
             var aboutTop = $("#about").offset().top;
             var workTop = $("#work").offset().top;
             var portfolioTop = $("#portfolio").offset().top;
             var contactTop = $("#contact").offset().top;
             var nav = $("#header #nav li a");
-            if(headerTop<aboutTop) {
+            if (headerTop < aboutTop) {
                 nav.removeClass("checked");
                 $("#header #nav li a[href='#home']").addClass("checked");
-            } else if(headerTop<workTop-50) {
+            } else if (headerTop < workTop - 50) {
                 nav.removeClass("checked");
                 $("#header #nav li a[href='#about']").addClass("checked");
-            } else if(headerTop<portfolioTop-200) {
+            } else if (headerTop < portfolioTop - 200) {
                 nav.removeClass("checked");
                 $("#header #nav li a[href='#work']").addClass("checked");
-            } else if(headerTop<contactTop-50) {
+            } else if (headerTop < contactTop - 50) {
                 nav.removeClass("checked");
                 $("#header #nav li a[href='#portfolio']").addClass("checked");
             } else {
@@ -292,17 +361,59 @@
 
     function makeYoutubeModal(e, target) {
         e.preventDefault();
-        var iframe = target.prev("iframe");
+        let _iframe = target.prev("iframe");
         $("body").append(
             "<div class='youtube-modal-wrapper'></div>"
         );
-        iframe.clone().appendTo(".youtube-modal-wrapper");
-        $(".youtube-modal-wrapper ifame").on("click", function (e) {
+        _iframe.clone().appendTo(".youtube-modal-wrapper");
+        $(".youtube-modal-wrapper iframe").on("click", function (e) {
             e.stopPropagation();
         });
         $(".youtube-modal-wrapper").on("click", function () {
             $(this).remove();
         });
+    }
+
+    function makeYoutubeIframe() {
+        let indexFirst = getRandomIntInclusive(1, 10);
+        let indexSecond = getRandomIntInclusive(1, 10);
+        let indexThird = getRandomIntInclusive(1, 10);
+
+
+        $(".youtube-play-list").each(function () {
+            let this_ = this;
+            if ($(this).hasClass("youtube-player-first")) {
+                let youtubePlayerFirst = new YT.Player(this_, {
+                    playerVars: {
+                        listType: 'playlist',
+                        list: 'PLS3D_QPdHI3DVAXBwnDi879t5urTAlnrQ',
+                        index: indexFirst
+                    }
+                });
+            } else if ($(this).hasClass("youtube-player-second")) {
+                let youtubePlayerSecond = new YT.Player(this_, {
+                    playerVars: {
+                        listType: 'playlist',
+                        list: 'PLS3D_QPdHI3DhPNguZNa4m5CmJ0P3Zsyk',
+                        index: indexSecond
+                    }
+                });
+            } else if ($(this).hasClass("youtube-player-third")) {
+                let youtubePlayerThird = new YT.Player(this_, {
+                    playerVars: {
+                        listType: 'playlist',
+                        list: 'PLS3D_QPdHI3DkbkZFFmzdyOkEg1uv2hzF',
+                        index: indexThird
+                    }
+                });
+            }
+        });
+    }
+
+    function getRandomIntInclusive(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min; //최댓값도 포함, 최솟값도 포함
     }
 </script>
 
