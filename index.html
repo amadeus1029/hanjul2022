@@ -18,6 +18,7 @@
     <link href="css/YouTubePopUp.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="js/YouTubePopUp.jquery.js"></script>
     <script type="text/javascript" src="js/jquery.youtube-background.min.js"></script>
+    <script src="http://www.youtube.com/player_api"></script>
 
     <!-- swiper -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
@@ -61,7 +62,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="youtube" href="https://www.youtube.com/channel/UCi7_EObK0MfwMju5FSeAarw"
+                        <a class="youtube" href="https://www.youtube.com/channel/UCShUiFxzxyuHihT3XNnvPqw"
                            target="_blank">
                         </a>
                     </li>
@@ -70,7 +71,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="smart" href="#none" target="_blank">
+                        <a class="smart" href="https://smartstore.naver.com/hanjul" target="_blank">
                         </a>
                     </li>
                     <li>
@@ -150,21 +151,24 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="inner-wrapper">
-                                <div class="youtube-play-list youtube-player-first"></div>
+                                <iframe class="first-video"
+                                        src="https://www.youtube.com/embed/?listType=playlist&list=PLS3D_QPdHI3DVAXBwnDi879t5urTAlnrQ&enablejsapi=1&origin=http://localhost:63342&index="></iframe>
                                 <div class="youtube" onclick="makeYoutubeModal(event,$(this))"></div>
                             </div>
                             <p>편집자의 소양</p>
                         </div>
                         <div class="swiper-slide">
                             <div class="inner-wrapper">
-                                <div class="youtube-play-list youtube-player-second"></div>
+                                <iframe class="second-video"
+                                        src="https://www.youtube.com/embed/?listType=playlist&list=PLS3D_QPdHI3DhPNguZNa4m5CmJ0P3Zsyk&enablejsapi=1&origin=http://localhost:63342&index="></iframe>
                                 <div class="youtube" onclick="makeYoutubeModal(event,$(this))"></div>
                             </div>
                             <p>한줄포차</p>
                         </div>
                         <div class="swiper-slide">
                             <div class="inner-wrapper">
-                                <div class="youtube-play-list youtube-player-third"></div>
+                                <iframe class="third-video"
+                                        src="https://www.youtube.com/embed/?listType=playlist&list=PLS3D_QPdHI3DkbkZFFmzdyOkEg1uv2hzF&enablejsapi=1&origin=http://localhost:63342&index="></iframe>
                                 <div class="youtube" onclick="makeYoutubeModal(event,$(this))"></div>
                             </div>
                             <p>한줄스토어</p>
@@ -262,10 +266,10 @@
             <p class="title">성공적인 영상/디자인/촬영 한줄을 더해보세요.</p>
             <ul class="icon-list clearfix">
                 <li><img src="img/mail_icon.png" alt="mail" class="icon">
-                    <p><span>E-MAIL</span><span>han_jul@naver.com</span></p>
+                    <p><span>E-MAIL</span><span>admin@han-jul.com</span></p>
                 </li>
                 <li><img src="img/map_icon.png" alt="map" class="icon">
-                    <p><span>CALL</span><span>서울특별시 서대문구 가좌로 123</span></p>
+                    <p><span>ADDRESS</span><span>서울특별시 서대문구 가좌로 123</span></p>
                 </li>
                 <li><img src="img/call_icon.png" alt="call" class="icon">
                     <p><span>CALL</span><span>070-4624-0001</span></p>
@@ -276,9 +280,9 @@
                 <li><a href="https://m.facebook.com/videoteamhanjul/?ref=bookmarks"
                        target="_blank"></a><span>FACEBOOK</span></li>
                 <li><a href="https://www.instagram.com/_han_jul_/" target="_blank"></a><span>INSTAGRAM</span></li>
-                <li><a href=https://www.youtube.com/channel/UCi7_EObK0MfwMju5FSeAarw"
+                <li><a href="https://www.youtube.com/channel/UCShUiFxzxyuHihT3XNnvPqw"
                        target="_blank"></a><span>YOUTUBE</span></li>
-                <li><a href="#none"></a><span>SMARTSTORE</span></li>
+                <li><a href="https://smartstore.naver.com/hanjul"></a><span>SMARTSTORE</span></li>
             </ul>
         </div>
     </div>
@@ -288,16 +292,14 @@
         <h3 class="logo"><img src="img/logo.png" alt="logo"></h3>
         <div class="info-wrapper">
             <h4>당신의 컨텐츠에 한줄을 +</h4>
-            <p>Tel .070-4624-0001 I han_jul@naver.com I 사업자등록번호 : 624-10-01804</p>
+            <p>Tel .070-4624-0001 I admin@han-jul.com I 사업자등록번호 : 624-10-01804</p>
             <p>Copyright 2022. han-jul All rights reserved.</p>
         </div>
     </div>
 </footer>
 <script>
-</script>
-<script>
     $(document).ready(function () {
-
+        document.cookie = "SameSite=None; Secure"
         //swiper slide
         const swiper = new Swiper('.swiper', {
             // Optional parameters
@@ -326,10 +328,9 @@
         //유튜브 팝업
         $("a.youtube-bind").YouTubePopUp({autoplay: 0});
 
-        //유튜브 플레이리스트 iframe initiate
-        $.getScript("https://www.youtube.com/iframe_api", function () {
-            makeYoutubeIframe();
-        });
+        //randomIndex for youtube
+        randomIndexToYoutube();
+
 
         //스크롤 위치에 따라 네비게이션 버튼 colored
         $(window).scroll(function () {
@@ -373,40 +374,56 @@
         });
     }
 
-    function makeYoutubeIframe() {
-        let indexFirst = getRandomIntInclusive(1, 10);
-        let indexSecond = getRandomIntInclusive(1, 10);
-        let indexThird = getRandomIntInclusive(1, 10);
-
-
-        $(".youtube-play-list").each(function () {
-            let this_ = this;
-            if ($(this).hasClass("youtube-player-first")) {
-                let youtubePlayerFirst = new YT.Player(this_, {
-                    playerVars: {
-                        listType: 'playlist',
-                        list: 'PLS3D_QPdHI3DVAXBwnDi879t5urTAlnrQ',
-                        index: indexFirst
-                    }
-                });
-            } else if ($(this).hasClass("youtube-player-second")) {
-                let youtubePlayerSecond = new YT.Player(this_, {
-                    playerVars: {
-                        listType: 'playlist',
-                        list: 'PLS3D_QPdHI3DhPNguZNa4m5CmJ0P3Zsyk',
-                        index: indexSecond
-                    }
-                });
-            } else if ($(this).hasClass("youtube-player-third")) {
-                let youtubePlayerThird = new YT.Player(this_, {
-                    playerVars: {
-                        listType: 'playlist',
-                        list: 'PLS3D_QPdHI3DkbkZFFmzdyOkEg1uv2hzF',
-                        index: indexThird
-                    }
+    function randomIndexToYoutube() {
+        let firstPlaylistIndex;
+        let secondPlaylistIndex;
+        let thirdPlaylistIndex;
+        let youtubeAPI = "https://www.googleapis.com/youtube/v3/playlistItems?playlistId="
+        let firstPlaylistId = "PLS3D_QPdHI3DVAXBwnDi879t5urTAlnrQ";
+        let secondPlaylistId = "PLS3D_QPdHI3DhPNguZNa4m5CmJ0P3Zsyk";
+        let thirdPlaylistId = "PLS3D_QPdHI3DkbkZFFmzdyOkEg1uv2hzF";
+        let key = "AIzaSyDL9k_PSjjJwpJDGD3YQg7Ol-2i10831eY"
+        $.ajax({
+            method: "GET",
+            url: youtubeAPI + firstPlaylistId + "&key=" + key,
+            success: function (resp) {
+                firstPlaylistIndex = resp.pageInfo.totalResults;
+                let indexFirst = getRandomIntInclusive(1, firstPlaylistIndex);
+                $(".swiper-slide iframe.first-video").each(function () {
+                    let src = $(this).attr("src");
+                    $(this).attr("src", src + indexFirst);
                 });
             }
         });
+        $.ajax({
+            method: "GET",
+            url: youtubeAPI + secondPlaylistId + "&key=" + key,
+            success: function (resp) {
+                secondPlaylistIndex = resp.pageInfo.totalResults;
+                let indexSecond = getRandomIntInclusive(1, secondPlaylistIndex);
+                $(".swiper-slide iframe.second-video").each(function () {
+                    let src = $(this).attr("src");
+                    $(this).attr("src", src + indexSecond);
+                });
+            }
+        });
+        $.ajax({
+            method: "GET",
+            url: youtubeAPI + thirdPlaylistId + "&key=" + key,
+            success: function (resp) {
+                thirdPlaylistIndex = resp.pageInfo.totalResults;
+                let indexThird = getRandomIntInclusive(1, thirdPlaylistIndex);
+                $(".swiper-slide iframe.third-video").each(function () {
+                    let src = $(this).attr("src");
+                    $(this).attr("src", src + indexThird);
+                });
+            }
+        });
+
+
+
+
+
     }
 
     function getRandomIntInclusive(min, max) {
